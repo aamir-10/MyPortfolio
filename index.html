@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aamir Imam | Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+
+    <button id="scroll-top-btn" onclick="scrollToTop()">↑</button>
+
+    <!-- Navbar -->
+    <header data-aos="fade-down">
+        <nav>
+            <div class="logo">Aamir Imam</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="home-content">
+                <h1 data-aos="fade-up">Hi, I'm <span class="gradient-text">Aamir Imam</span></h1>
+                <h2><span id="typing-text"></span></h2>
+
+                <div class="description-box" data-aos="fade-in">
+                    <p data-aos="fade-right">
+                        👋 <strong>Hey there!</strong> I'm a <strong>Software Developer & Data Science Enthusiast</strong>  
+                        passionate about <strong>solving real-world problems</strong> using cutting-edge technologies.
+                    </p>
+                    <p data-aos="fade-left">
+                        🚀 Skilled in <strong>Java, Python, Web Development, Blockchain, and Data Science</strong>,  
+                        I build <strong>scalable, efficient, and innovative</strong> applications.
+                    </p>
+                    <p data-aos="fade-right">
+                        💡 Let's collaborate and create something <strong>impactful</strong> together!
+                    </p>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn" data-aos="zoom-in">🔍 Explore My Work</a>
+                    <a href="Aamir_SDE.pdf" class="btn secondary" data-aos="zoom-in" target="_blank">📜 Download My Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2 data-aos="fade-right">About Me</h2>
+            <div class="about-content">
+                <div class="image-container" data-aos="zoom-in">
+                    <img src="assets/images/profile.jpg" alt="Aamir Imam">
+                </div>
+                <div class="text" data-aos="fade-left">
+                    <p>
+                        I am a <strong>B.Tech Computer Science and Engineering</strong> student (Data Science specialization) at <strong>Bennett University</strong>, 
+                        currently holding a <strong>CGPA of 9.5</strong>.
+                    </p>
+                    <p>
+                        My expertise lies in **Software Development, Data Science, Web Development, and Blockchain**. 
+                        I love solving complex challenges and building **secure, scalable, and efficient** solutions.
+                    </p>
+                    <p>
+                        Apart from coding, I actively contribute to **open-source projects** and participate in **hackathons**.  
+                        I'm always eager to learn and explore new technologies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 data-aos="fade-up">Skills</h2>
+            
+            <div class="skill-container">
+                <div class="skill-name">Java</div>
+                <div class="skill-bar"><div class="skill-progress" data-skill="90"><span class="skill-percent">90%</span></div></div>
+    
+                <div class="skill-name">Python</div>
+                <div class="skill-bar"><div class="skill-progress" data-skill="85"><span class="skill-percent">85%</span></div></div>
+    
+                <div class="skill-name">HTML</div>
+                <div class="skill-bar"><div class="skill-progress" data-skill="75"><span class="skill-percent">75%</span></div></div>
+    
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar"><div class="skill-progress" data-skill="80"><span class="skill-percent">80%</span></div></div>
+    
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-bar"><div class="skill-progress" data-skill="70"><span class="skill-percent">70%</span></div></div>
+    
+                <div class="skill-name">React</div>
+                <div class="skill-bar"><div class="skill-progress" data-skill="65"><span class="skill-percent">65%</span></div></div>
+    
+                <div class="skill-name">SQL</div>
+                <div class="skill-bar"><div class="skill-progress" data-skill="80"><span class="skill-percent">80%</span></div></div>
+    
+                <div class="skill-name">Django</div>
+                <div class="skill-bar"><div class="skill-progress" data-skill="75"><span class="skill-percent">75%</span></div></div>
+    
+                <div class="skill-name">Data Science</div>
+                <div class="skill-bar"><div class="skill-progress" data-skill="85"><span class="skill-percent">85%</span></div></div>
+    
+                <div class="skill-name">Machine Learning</div>
+                <div class="skill-bar"><div class="skill-progress" data-skill="80"><span class="skill-percent">80%</span></div></div>
+            </div>
+        </div>
+    </section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <h2 data-aos="fade-up">Projects</h2>
+        <div class="project-grid">
+
+            <div class="project-card" data-aos="zoom-in">
+                <h3>Weather Forecasting</h3>
+                <p>Developed a time series project using various models like ARIMA, SARIMA, LSTM etc, for accurate energy consumption forecasting, enhancing decision-making with predictive analytics.</p>
+                <p>Designed interactive dashboards in Power BI & Tableau to visualize actual vs. predicted trends, utilizing MSE, RMSE, and MAE for performance evaluation.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card" data-aos="zoom-in">
+                <h3>Blockchain-Based Voting System</h3>
+                <p>Revolutionized online elections with a blockchain-powered voting system, ensuring security, transparency, and fraud prevention.</p>
+                <p>Implemented voter authentication, decentralized vote storage, and tamper-proof records for a seamless and trusted experience.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card" data-aos="zoom-in">
+                <h3>Expense Tracker</h3>
+                <p>Designed a user-friendly expense tracker with real-time budget monitoring, insightful visualizations, and seamless data synchronization.</p>
+                <p>Integrated JWT authentication and role-based access control, ensuring secure and personalized financial tracking.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience">
+    <div class="experience-container">
+        <h2 data-aos="fade-up">Experience</h2>
+
+        <div class="experience-item" data-aos="fade-right">
+            <h3 class="experience-title">Data Science Intern - Aican Automate</h3>
+            <p class="experience-date">January 2023 – March 2023 | Virtual</p>
+            <ul class="experience-details">
+                <li>Automated data pipelines, reducing processing time by 30%.</li>
+                <li>Implemented ML models, improving predictive accuracy by 20%.</li>
+                <li>Developed real-time analytics dashboards for decision-making.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Achievements Section -->
+<section id="achievements">
+    <div class="achievements-container">
+        <h2 data-aos="fade-up">Achievements</h2>
+
+        <div class="achievement-grid">
+
+            <!-- First Achievement -->
+            <div class="achievement-item" data-aos="fade-right">
+                <div class="achievement-image">
+                    <img src="assets/images/Research.jpg" alt="IET Conference Presentation">
+                </div>
+                <div class="achievement-text">
+                    <h3 class="achievement-title">Presented at the IET Research Conference, NIT Patna</h3>
+                    <p class="achievement-date">July 2023</p>
+                    <ul class="achievement-details">
+                        <li>Analyzed the role of ChatGPT in software engineering education, evaluating its effectiveness in coding, bug fixing, and logical problem-solving.</li>
+                        <li>Provided insights on how software students can leverage ChatGPT to advance their careers.</li>
+                        <li><a href="https://ieeexplore.ieee.org/document/10235793" target="_blank">Click here!</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Second Achievement -->
+            <div class="achievement-item" data-aos="fade-left">
+                <div class="achievement-image">
+                    <img src="assets/images/Deans.jpg" alt="Dean’s List Award">
+                </div>
+                <div class="achievement-text">
+                    <h3 class="achievement-title">Dean’s List Award</h3>
+                    <p class="achievement-date">October 2024</p>
+                    <ul class="achievement-details">
+                        <li>Recognized for outstanding academic achievement.</li>
+                        <li>Secured a position in the top percentile of students.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Certifications Section -->
+
+<section id="certifications">
+    <h2 data-aos="fade-up">Certifications</h2>
+
+    <div class="certifications-grid">
+        <div class="cert-item-container">
+            <div class="cert-item" data-aos="fade-up">
+                <img src="assets/images/Data_Structures.png" alt="UC San Diego Data Structures">
+            </div>
+            <p class="cert-title">UC San Diego - Data Structures</p>
+            <p class="cert-description">
+                Mastered key data structures like arrays, linked lists, trees, and graphs, focusing on efficient implementation and optimization.
+            </p>
+        </div>
+
+        <div class="cert-item-container">
+            <div class="cert-item" data-aos="fade-up">
+                <img src="assets/images/Google.png" alt="Google Data Analytics">
+            </div>
+            <p class="cert-title">Google Data Analytics</p>
+            <p class="cert-description">
+                Gained expertise in data analysis, SQL, R, and Tableau, preparing for data-driven decision-making roles.
+            </p>
+        </div>
+
+        <div class="cert-item-container">
+            <div class="cert-item" data-aos="fade-up">
+                <img src="assets/images/Algorithmic_Toolbox.png" alt="UC San Diego Algorithmic Toolbox">
+            </div>
+            <p class="cert-title">UC San Diego - Algorithmic Toolbox</p>
+            <p class="cert-description">
+                Learned essential algorithmic techniques like recursion, greedy algorithms, divide & conquer, and dynamic programming.
+            </p>
+        </div>
+
+        <div class="cert-item-container">
+            <div class="cert-item" data-aos="fade-up">
+                <img src="assets/images/Eppoch_Hackathon.png" alt="Epoch Hackathon IIIT Delhi">
+            </div>
+            <p class="cert-title">Epoch Hackathon - IIIT Delhi</p>
+            <p class="cert-description">
+                Competed in a high-intensity coding hackathon, developing innovative solutions in software development and AI/ML.
+            </p>
+        </div>
+
+        <div class="cert-item-container">
+            <div class="cert-item" data-aos="fade-up">
+                <img src="assets/images/apna_college.png" alt="Apna College DSA in Java">
+            </div>
+            <p class="cert-title">Apna College - DSA in Java</p>
+            <p class="cert-description">
+                Strengthened problem-solving skills through in-depth learning of Data Structures and Algorithms using Java.
+            </p>
+        </div>
+
+        <div class="cert-item-container">
+            <div class="cert-item" data-aos="fade-up">
+                <img src="assets/images/IBM.png" alt="IBM Professional Machine Learning">
+            </div>
+            <p class="cert-title">IBM Professional Machine Learning Certificate</p>
+            <p class="cert-description">
+                Specialized in machine learning, deep learning, and model deployment using Python and IBM Watson tools.
+            </p>
+        </div>
+    </div>
+</section>
+
+    
+<!-- Contact Section -->
+    <section id="contact">
+        <h2 data-aos="fade-up">Contact Me</h2>
+        <p>Have a project in mind? Let's connect!</p>
+        
+        <form id="contact-form" action="https://formspree.io/f/myzeweed" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="social-links">
+            <a href="#"><img src="assets/images/linkedin.jpeg" alt="LinkedIn"></a>
+            <a href="#"><img src="assets/images/Github.jpeg" alt="GitHub"></a>
+            <a href="mailto:aamirimam777@gmail.com"><img src="assets/images/gmail.jpg" alt="Email"></a>
+        </div>
+    </section>
+
+</body>
+</html>
