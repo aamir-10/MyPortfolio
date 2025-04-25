@@ -42,7 +42,6 @@ nav ul li a:hover {
 }
 
 /* Home Section */
-/* Home Section */
 #home {
     display: flex;
     flex-direction: column;
@@ -175,7 +174,6 @@ nav ul li a:hover {
 }
 
 
-
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -208,7 +206,10 @@ nav ul li a:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px rgba(255, 153, 0, 0.8);
 }
-
+.about-content .text:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(255, 153, 0, 0.4);
+}
 /* Text Content */
 .about-content .text {
     text-align: left;
@@ -255,8 +256,6 @@ nav ul li a:hover {
         padding: 15px;
     }
 }
-
-/* Skills */
 /* Skills */
 #skills {
     background: #1a1a1a; /* Matching the dark theme */
@@ -282,7 +281,7 @@ nav ul li a:hover {
 .skill {
     padding: 12px 20px;
     background: #262626; /* Darker gray for contrast */
-    color: #fff;
+    color: #F1D39A;
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
@@ -320,7 +319,7 @@ nav ul li a:hover {
 .skill-name {
     font-weight: bold;
     margin-bottom: 5px;
-    color: #f39c12; /* Accent color */
+    color:#F1D39A ; /* Accent color */
     text-transform: uppercase;
     font-size: 14px;
 }
@@ -332,6 +331,49 @@ nav ul li a:hover {
     font-size: 14px;
     font-weight: bold;
     color: #fff;
+}
+.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.skills-card {
+    background: #222;
+    padding: 30px 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    transition: 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.skills-card:hover {
+    transform: scale(1.02);
+}
+
+.skills-card h3 {
+    color: #f39c12;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.soft-card .skills-grid {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    
+}
+.technical-card .skill-container {
+    margin-top: 20px; /* Add space inside technical card for consistency */
 }
 
 /* Projects */
@@ -372,6 +414,66 @@ nav ul li a:hover {
     display: block;
     text-align: center;
     margin-top: 10px;
+}
+
+#projects {
+    text-align: center;
+    background: #1e1e1e;
+    padding: 80px 20px;
+}
+#projects h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.project-card {
+    background: #262626;
+    color: #fff;
+    width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(255, 153, 0, 0.4);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.project-card h3 {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 22px;
+}
+.project-card p {
+    text-align: center;
+    padding: 0 15px;
+    font-size: 16px;
+}
+.project-card .btn {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background: #f39c12;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.project-card .btn:hover {
+    background: #e67e22;
 }
 
 /* Experience */
@@ -452,65 +554,6 @@ nav ul li a:hover {
     display: flex;
     align-items: center; /* Centers tick vertically */
     justify-content: center;
-}
-
-#projects {
-    text-align: center;
-    background: #1e1e1e;
-    padding: 80px 20px;
-}
-#projects h2 {
-    font-size: 36px;
-    color: #fff;
-    margin-bottom: 20px;
-}
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-.project-card {
-    background: #262626;
-    color: #fff;
-    width: 500px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
-}
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-.project-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-.project-card h3 {
-    text-align: center;
-    margin: 15px 0;
-    font-size: 22px;
-}
-.project-card p {
-    text-align: center;
-    padding: 0 15px;
-    font-size: 16px;
-}
-.project-card .btn {
-    display: inline-block;
-    margin: 15px 0;
-    padding: 10px 20px;
-    background: #f39c12;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-.project-card .btn:hover {
-    background: #e67e22;
 }
 #contact {
     text-align: center;
@@ -838,5 +881,3 @@ nav ul li a:hover {
         max-width: 100%;
     }
 }
-
-
