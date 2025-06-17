@@ -287,28 +287,6 @@ nav ul li a:hover {
     font-weight: bold;
     transition: 0.3s;
 }
-.skill:hover {
-    background: #333; /* Slightly lighter on hover */
-    transform: scale(1.1);
-}
-.skill-bar {
-    width: 100%;
-    background-color: #333; /* Darker gray */
-    border-radius: 10px;
-    margin-bottom: 15px;
-    position: relative;
-    height: 12px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-}
-
-.skill-progress {
-    height: 100%;
-    width: 0;
-    background: linear-gradient(90deg, #f39c12, #e67e22); /* Using warm gradient like buttons */
-    border-radius: 10px;
-    transition: width 1.5s ease-in-out;
-}
 
 .skill-container {
     max-width: 700px;
@@ -324,14 +302,7 @@ nav ul li a:hover {
     font-size: 14px;
 }
 
-.skill-percent {
-    position: absolute;
-    right: 10px;
-    top: -25px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-}
+
 .skills-section {
     display: flex;
     flex-wrap: wrap;
@@ -349,10 +320,12 @@ nav ul li a:hover {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
     transition: 0.3s ease-in-out;
     box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skills-card:hover {
-    transform: scale(1.02);
+.skill-card:hover {
+  transform: translateY(-5px);
+   box-shadow: 0 6px 25px rgba(243, 156, 18, 0.3);
 }
 
 .skills-card h3 {
@@ -364,117 +337,202 @@ nav ul li a:hover {
     padding-bottom: 10px;
 }
 
-.soft-card .skills-grid {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-    
-}
-.technical-card .skill-container {
-    margin-top: 20px; /* Add space inside technical card for consistency */
+
+
+.skills-grid-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
 }
 
+.skill-card {
+  background: #262626;
+  padding: 30px 20px;
+  border-radius: 16px;
+  width: 260px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(255, 153, 0, 0.4); /* Golden glow like project cards */
+}
+
+
+.skill-card h3 {
+  color: #fff;
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  background: #333;
+  margin: 8px 0;
+  padding: 10px;
+  color: #F1D39A;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.skill-card li:hover {
+  background: #444;
+  transform: scale(1.05);
+}
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-radius: 12px;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.programming-icon {
+  background-color: #7b2ff7;
+  background-image: url('https://img.icons8.com/ios-filled/50/code--v1.png');
+}
+.webtech-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+  background-color: #2ecc71;
+  background-image: url('https://img.icons8.com/ios-filled/50/cloud-development.png');
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.ml-icon {
+  background-color: #c0392b;
+  background-image: url('https://img.icons8.com/ios-filled/50/brain.png');
+}
+.tools-icon {
+  background-color: #e67e22;
+  background-image: url('https://img.icons8.com/ios-filled/50/settings--v1.png');
+}
 /* Projects */
-#projects {
-    background: #1a1a1a;
-    padding: 80px 20px;
-    text-align: center;
-}
 #projects h2 {
     font-size: 36px;
+    color: #fff;
     margin-bottom: 20px;
 }
-.project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-.project-card {
-    background: #222;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-    text-align: left;
-    transition: 0.3s;
-}
-.project-card:hover {
-    transform: translateY(-5px);
-}
-.project-card h3 {
-    color: #f39c12;
-}
-.project-card p {
-    font-size: 16px;
-    opacity: 0.9;
-}
-.project-card .btn {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
+#projects {
+  background: linear-gradient(135deg, #1a1a1a, #1e1e2f);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-#projects {
-    text-align: center;
-    background: #1e1e1e;
-    padding: 80px 20px;
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 40px;
 }
-#projects h2 {
-    font-size: 36px;
-    color: #fff;
-    margin-bottom: 20px;
-}
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
+
+/* Project Card with Glassmorphism */
 .project-card {
-    background: #262626;
-    color: #fff;
-    width: 500px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
+  background-color: #1e1e25;
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 500px;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  padding-bottom: 20px;
 }
+
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(255, 153, 0, 0.4);
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(255, 140, 0, 0.7);
 }
 
 .project-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 .project-card h3 {
-    text-align: center;
-    margin: 15px 0;
-    font-size: 22px;
+  font-size: 24px;
+  color: #f39c12;
+  margin: 20px 0 10px;
 }
+
 .project-card p {
-    text-align: center;
-    padding: 0 15px;
-    font-size: 16px;
+  font-size: 15px;
+  color: #dcdcdc;
+  padding: 0 20px 10px;
 }
+
+/* Fancy CTA Button */
 .project-card .btn {
-    display: inline-block;
-    margin: 15px 0;
-    padding: 10px 20px;
-    background: #f39c12;
-    color: #000;
+ display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: black;
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
     text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
+    font-weight: bold;
+    margin: 15px;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.6);
 }
+
 .project-card .btn:hover {
-    background: #e67e22;
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(255, 140, 0, 0.7);
 }
+
+/* Tags (Tech Stack Pills) */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.project-tags span {
+  background-color: #2e2e3e;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.project-description {
+  background-color: rgba(255, 255, 255, 0.05); /* subtle light overlay */
+  padding: 15px 20px;
+  margin: 0 20px 15px 20px; /* Add left & right margin to avoid edge contact */
+  border-radius: 12px;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
 
 /* Experience */
 #experience {
@@ -521,12 +579,6 @@ nav ul li a:hover {
     color: #f39c12;
 }
 
-.experience-date {
-    text-align: center;
-    font-size: 16px;
-    font-style: italic;
-    color: #aaa;
-}
 
 .experience-details {
     list-style: none; /* Removes default bullets */
@@ -555,6 +607,83 @@ nav ul li a:hover {
     align-items: center; /* Centers tick vertically */
     justify-content: center;
 }
+.experience-card {
+  background-color: #1e1e2f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #2e2e3e;
+  box-shadow: 0 0 10px rgba(150, 100, 255, 0.2);
+  color: #fff;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.experience-date {
+  background: #f39c12;
+  color: #100000;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+
+
+.experience-role {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.experience-company {
+  color: #f39c12;
+  margin-bottom: 0.8rem;
+}
+
+.experience-description {
+  font-size: 0.95rem;
+  color: #dcdcdc;
+  margin-bottom: 1rem;
+}
+
+.experience-tags span {
+  background: #2d2d3d;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+  color: #ddd;
+}
+.timeline {
+  position: relative;
+  margin: 40px auto;
+  padding-left: 30px;
+  border-left: 3px solid #f39c12;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  background-color: #704a0c;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 3px #f39c12;
+  z-index: 1;
+  transform: rotate(45deg); /* diamond look */
+}
+
+
+
 #contact {
     text-align: center;
     padding: 80px 20px;
@@ -633,9 +762,9 @@ nav ul li a:hover {
 
 /* Certification  */
 #certifications {
-    text-align: center;
-    padding: 80px 40px; /* Increased padding to add space from screen borders */
-    background: #181818;
+  text-align: center;
+  padding: 80px 40px;
+  background: #181818;
 }
 
 /* Certification Title */
@@ -657,21 +786,19 @@ nav ul li a:hover {
 
 /* Certification Card */
 .cert-item-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers content horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Certification Item */
-.cert-item {
-    background: #1f1f1f; /* Darker background for contrast */
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 100%;
-    max-width: 300px; /* Slightly larger width */
+
+.cert-item img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 10px;
 }
 
 .cert-item:hover {
@@ -679,7 +806,7 @@ nav ul li a:hover {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
-/* Certification Image */
+
 .cert-item img {
     width: 100%;
     max-width: 240px;
@@ -689,28 +816,34 @@ nav ul li a:hover {
     border-radius: 8px; /* Optional rounded corners */
 }
 
-/* Certification Title */
+
 .cert-item p {
-    font-size: 20px; /* Larger title for emphasis */
-    font-weight: 1000; /* Bolder text */
-    color: #816d1d; /* Highlight color for title */
-    margin-bottom: 8px;
-    text-transform: uppercase; /* Adds a professional touch */
-    letter-spacing: 1px; /* Enhances readability */
-    text-align: center;
+      font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Certification Title */
-.cert-title {
-    font-size: 20px;
-    font-weight: 800;
-    color: #bd8730; /* Highlighted color */
-    margin-top: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: center;
-}
 
+.cert-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #f39c12, #e67e22);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
 /* Certification Description */
 .cert-description {
     font-size: 16px;
@@ -741,7 +874,7 @@ nav ul li a:hover {
 /* Achievements Section */
 #achievements {
     text-align: center;
-    background: linear-gradient(135deg, #121212, #1e1e1e);
+    background: linear-gradient(135deg, #1a1a1a, #1e1e2f);
     padding: 60px 20px;
     color: #fff;
 }

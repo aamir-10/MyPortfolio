@@ -87,111 +87,237 @@
 
 <!-- Skills Section -->
 <section id="skills">
-    <div class="container">
-      <h2 data-aos="fade-up">Skills</h2>
-      <div class="skills-section">
-        
-        <!-- Technical Skills Card -->
-        <div class="skills-card technical-card">
-            <h3 data-aos="fade-up" style="margin-top: 40px;">Technical Skills</h3>
-          <div class="skill-container">
-            <div class="skill-name">Java</div>
-            <div class="skill-bar"><div class="skill-progress" data-skill="90"><span class="skill-percent">90%</span></div></div>
-  
-            <div class="skill-name">Python</div>
-            <div class="skill-bar"><div class="skill-progress" data-skill="85"><span class="skill-percent">85%</span></div></div>
-  
-            <div class="skill-name">HTML</div>
-            <div class="skill-bar"><div class="skill-progress" data-skill="75"><span class="skill-percent">75%</span></div></div>
-  
-            <div class="skill-name">CSS</div>
-            <div class="skill-bar"><div class="skill-progress" data-skill="80"><span class="skill-percent">80%</span></div></div>
-  
-            <div class="skill-name">JavaScript</div>
-            <div class="skill-bar"><div class="skill-progress" data-skill="70"><span class="skill-percent">70%</span></div></div>
-  
-            <div class="skill-name">React</div>
-            <div class="skill-bar"><div class="skill-progress" data-skill="65"><span class="skill-percent">65%</span></div></div>
-  
-            <div class="skill-name">SQL</div>
-            <div class="skill-bar"><div class="skill-progress" data-skill="80"><span class="skill-percent">80%</span></div></div>
-  
-            <div class="skill-name">Django</div>
-            <div class="skill-bar"><div class="skill-progress" data-skill="75"><span class="skill-percent">75%</span></div></div>
-  
-            <div class="skill-name">Data Science</div>
-            <div class="skill-bar"><div class="skill-progress" data-skill="60"><span class="skill-percent">60%</span></div></div>
-  
-            <div class="skill-name">Machine Learning</div>
-            <div class="skill-bar"><div class="skill-progress" data-skill="70"><span class="skill-percent">70%</span></div></div>
-          </div>
-        </div>
-  
-        <!-- Soft Skills Card -->
-        <div class="skills-card soft-card">
-            <h3 data-aos="fade-up" style="margin-top: 40px;">Soft Skills</h3>
-          <div class="skills-grid">
-            <div class="skill">Problem Solving</div>
-            <div class="skill">Time Management</div>
-            <div class="skill">Team Collaboration</div>
-            <div class="skill">Adaptability</div>
-            <div class="skill">Communication</div>
-            <div class="skill">Creativity</div>
-            <div class="skill">Leadership</div>
-          </div>
-        </div>
-  
+  <div class="container">
+    <h2 data-aos="fade-up">Skills</h2>
+
+    <div class="skills-grid-cards">
+      <!-- Programming -->
+      <div class="skill-card" data-aos="fade-right">
+        <div class="skill-icon programming-icon" data-aos="zoom-in"></div>
+        <h3 data-aos="fade-up">Programming</h3>
+        <ul data-aos="fade-up">
+          <li>Java</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+
+      <!-- Web Technologies -->
+      <div class="skill-card" data-aos="fade-up">
+        <div class="skill-icon webtech-icon" data-aos="zoom-in"></div>
+        <h3 data-aos="fade-up">Web Technologies</h3>
+        <ul data-aos="fade-up">
+          <li>React.js</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+          <li>Express.js</li>
+        </ul>
+      </div>
+
+      <!-- Data Science / ML -->
+      <div class="skill-card" data-aos="fade-left">
+        <div class="skill-icon ml-icon" data-aos="zoom-in"></div>
+        <h3 data-aos="fade-up">Data Science/ML</h3>
+        <ul data-aos="fade-up">
+          <li>Training & Modeling</li>
+          <li>Data Analysis</li>
+          <li>Machine Learning</li>
+          <li>Deep Learning</li>
+          <li>Big Data</li>
+          <li>Data Visualization</li>
+          <li>Predictive Pipelines</li>
+        </ul>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-card" data-aos="fade-up">
+        <div class="skill-icon tools-icon" data-aos="zoom-in"></div>
+        <h3 data-aos="fade-up">Tools</h3>
+        <ul data-aos="fade-up">
+          <li>Git/GitHub</li>
+          <li>Pandas</li>
+          <li>NumPy</li>
+          <li>Scikit-learn</li>
+          <li>TensorFlow</li>
+          <li>PowerBI</li>
+          <li>Excel</li>
+        </ul>
       </div>
     </div>
-  </section>    
+  </div>
+</section>
+
+
+
+    
+    
+
+ 
+   
 
 <!-- Projects Section -->
 <section id="projects">
-    <div class="container">
-        <h2 data-aos="fade-up">Projects</h2>
-        <div class="project-grid">
+  <div class="container">
+    <h2 data-aos="fade-up">Projects</h2>
+    <div class="project-grid">
 
-            <div class="project-card" data-aos="zoom-in">
-                <h3>Power Forecasting and Pipelining</h3>
-                <p>Built a robust time-series pipeline to forecast 7-day energy demand using ARIMA, SARIMA, Exponential Smoothing, and GARCH models on AEP hourly data for accurate energy consumption forecasting, enhancing decision-making with predictive analytics.</p>
-                <p>Designed an interactive Streamlit dashboard to visualize load and volatility forecasts, enhancing short-term planning with real-time insights</p>
-                <a href="https://power-consumption-forecasting-pipline-etxd2aiumsebnc7wqsnrq8.streamlit.app/" class="btn">View Project</a>
-            </div>
-
-            <div class="project-card" data-aos="zoom-in">
-                <h3>Heal Harbour</h3>
-                <p>Developed a machine learning-based disease prediction system using blood sample data, evaluating models such as Logistic Regression, Decision Tree, Gradient Boosting, and XGBoost. Comprehensive performance analysis revealed XGBoost as the most accurate, achieving ~98% accuracy.</p>
-                <p>Implemented the XGBoost prediction model, serving as the core component for the disease prediction system with plans for further integration and deployment.</p>
-                <a href="https://github.com/aamir-10/HEAL_HARBOUR" class="btn">View Project</a>
-            </div>
-
-            <div class="project-card" data-aos="zoom-in">
-                <h3>Expense Tracker</h3>
-                <p>Built a full-stack Expense Tracker using the MERN stack, featuring JWT authentication, monthly income/expense tracking, budget limit setting, and interactive data visualizations through dynamic charts.</p>
-                <p>Implemented a smart budget optimization system that analyzes user spending patterns and provides real-time alerts and suggestions to help users manage finances more efficiently.</p>
-                <a href="https://expensetracker-1wbg.onrender.com" class="btn">View Project</a>
-            </div>
-
+      <!-- Project: Expense Tracker -->
+      <div class="project-card" data-aos="zoom-in">
+        <img src="assets/images/expense-tracker.png" alt="Expense Tracker Screenshot" />
+        <h3>Expense Tracker</h3>
+        <div class="project-description">
+        <p>Built a full-stack Expense Tracker using the MERN stack, featuring JWT authentication, monthly income/expense tracking, budget limit setting, and interactive data visualizations through dynamic charts.</p>
+        <p>Implemented a smart budget optimization system that analyzes user spending patterns and provides real-time alerts and suggestions to help users manage finances more efficiently.</p>
+        </div><a href="https://expensetracker-1wbg.onrender.com" class="btn">View Project</a>
+        <div class="project-tags">
+           <span>React.js</span>
+           <span>Node.js</span>
+           <span>Express.js</span>
+           <span>MongoDB</span>
         </div>
+      </div>
+
+      <!-- Project: Interview Prep Portal with tagline overlay -->
+      <div class="project-card project-with-overlay" data-aos="zoom-in">
+        <div class="project-image-wrapper">
+          <img src="assets/images/interview-prep-portal.png" alt="Interview Prep Portal Screenshot" />
+        </div>
+        <h3>Interview Prep Portal</h3>
+         <div class="project-description">
+        <p>Built a web app powered by Gemini API for personalized technical questions and answers to deliver tailored practice material, enhancing user engagement and preparation effectiveness.</p>
+        <p>Designed a dynamic and responsive UI supporting features like question pinning, expandable explanations and accordion-style QA display, to create an intuitive preparation environment.</p>
+        </div>
+        <a href="https://interviewprepportal-frontend.onrender.com" class="btn">View Project</a> <!-- Replace # with actual deployed URL -->
+        <div class="project-tags">
+           <span>React.js</span>
+           <span>Node.js</span>
+           <span>Express.js</span>
+           <span>MongoDB</span>
+           <span>TailwindCSS</span>
+           <span>Gemini</span>
+        </div>
+      </div>
+        <!-- Project: Power Forecasting -->
+      <div class="project-card" data-aos="zoom-in">
+        <img src="assets/images/power-forecasting.png" alt="Power Forecasting Screenshot" />
+        <h3>Power Forecasting and Pipelining</h3>
+        <div class="project-description">
+        <p>Built a robust time-series pipeline to forecast 7-day energy demand using ARIMA, SARIMA, Exponential Smoothing, and GARCH models on AEP hourly data for accurate energy consumption forecasting, enhancing decision-making with predictive analytics.</p>
+        <p>Designed an interactive Streamlit dashboard to visualize load and volatility forecasts, enhancing short-term planning with real-time insights. Also trained the dataset upon various time-series models.</p>
+        </div>
+        <a href="https://power-consumption-forecasting-pipline-etxd2aiumsebnc7wqsnrq8.streamlit.app/" class="btn">View Project</a>
+        <div class="project-tags">
+           <span>Python</span>
+           <span>Streamlit</span>
+           <span>ARIMA</span>
+           <span>SARIMA</span>
+           <span>Prophet</span>
+           <span>LSTM</span>
+           <span>GARCH</span>
+           <span>Exponential Smoothing</span>
+           
+        </div>
+      </div>
+
+      <!-- Project: Heal Harbour -->
+      <div class="project-card" data-aos="zoom-in">
+        <img src="assets/images/heal.jpg" alt="Heal Harbour Screenshot" />
+        <h3>Heal Harbour</h3>
+        <div class="project-description">
+        <p>Developed a machine learning-based disease prediction system using blood sample data, evaluating models such as Logistic Regression, Decision Tree, Gradient Boosting, and XGBoost. Comprehensive performance analysis revealed XGBoost as the most accurate, achieving ~98% accuracy.</p>
+        <p>Implemented the XGBoost prediction model, serving as the core component for the disease prediction system with plans for further integration and deployment.</p>
+        </div>
+        <a href="https://github.com/aamir-10/HEAL_HARBOUR" class="btn">View Project</a>
+        <div class="project-tags">
+           <span>Python</span>
+           <span>Logistic Regression</span>
+           <span>XGBoost</span>
+           <span>Decision Tree</span>
+           <span>Gradient Boosting Classifier</span>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
 
 <!-- Experience Section -->
 <section id="experience">
-    <div class="experience-container">
-        <h2 data-aos="fade-up">Experience</h2>
+  <div class="experience-container">
+    <h2 data-aos="fade-up">Experience</h2>
 
-        <div class="experience-item" data-aos="fade-right">
-            <h3 class="experience-title">Data Science Intern - Aican Automate</h3>
-            <p class="experience-date">January 2023 – March 2023 | Virtual</p>
-            <ul class="experience-details">
-                <li>Automated data pipelines, reducing processing time by 30%.</li>
-                <li>Implemented ML models, improving predictive accuracy by 20%.</li>
-                <li>Developed real-time analytics dashboards for decision-making.</li>
-            </ul>
-        </div>
+    <div class="timeline">
+        <!-- Timeline Item 1 -->
+<div class="timeline-item" data-aos="fade-up">
+  <div class="timeline-dot"></div>
+  <div class="experience-card">
+    <span class="experience-date">May 2025 – Present</span>
+    <h3 class="experience-role">Data Science Intern</h3>
+    <p class="experience-company">Celebal Technologies</p>
+    <p class="experience-description">
+      Currently working on real-world data science projects involving preprocessing, feature engineering, and model optimization🧠. Collaborating in a fast-paced team to deliver scalable data solutions for enterprise use.
+    </p>
+    <div class="experience-tags">
+      <span>Python</span>
+      <span>Machine Learning</span>
+      <span>Data Preprocessing</span>
+      <span>Model Tuning</span>
+      <span>SQL</span>
+      <span>GenAI</span>
     </div>
+  </div>
+</div>
+
+
+      
+
+      <!-- Timeline Item 2 -->
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-dot"></div>
+        <div class="experience-card">
+          <span class="experience-date">Apr 2024</span>
+          <h3 class="experience-role">Finalist – Team Underdogs</h3>
+          <p class="experience-company">National Hackathon</p>
+          <p class="experience-description">
+            Built smart gas pipeline routes using K-Means clustering, visualizations & ML📈. Predicted house values, optimized costs, and had a blast doing it!
+          </p>
+          <div class="experience-tags">
+            <span>Python</span>
+            <span>Clustering</span>
+            <span>Regression</span>
+            <span>Data Science</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline Item 3-->
+      <div class="timeline-item" data-aos="fade-up">
+        <div class="timeline-dot"></div>
+        <div class="experience-card">
+          <span class="experience-date">Jan – Mar 2023</span>
+          <h3 class="experience-role">Data Science Intern</h3>
+          <p class="experience-company">Aican Automate</p>
+          <p class="experience-description">
+            Automated messy data pipelines, built real-time dashboards📊, and improved model accuracy with smarter ML models.
+          </p>
+          <div class="experience-tags">
+            <span>Python</span>
+            <span>NumPy</span>
+            <span>Pandas</span>
+            <span>Matplotlib</span>
+            <span>Machine Learning</span>
+            <span>Data Visualization</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 
 <!-- Achievements Section -->
 <section id="achievements">
@@ -318,8 +444,8 @@
         </form>
 
         <div class="social-links">
-            <a href="#"><img src="assets/images/linkedin.jpeg" alt="LinkedIn"></a>
-            <a href="#"><img src="assets/images/Github.jpeg" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/aamir-imam-7aaa93259/"><img src="assets/images/linkedin.jpeg" alt="LinkedIn"></a>
+            <a href="https://github.com/aamir-10"><img src="assets/images/Github.jpeg" alt="GitHub"></a>
             <a href="mailto:aamirimam777@gmail.com"><img src="assets/images/gmail.jpg" alt="Email"></a>
         </div>
     </section>
