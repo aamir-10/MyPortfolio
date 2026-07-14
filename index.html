@@ -1,483 +1,653 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aamir Imam | Portfolio</title>
+    <title>Aamir Imam | Software Engineer</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script defer src="assets/js/script.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
 
-    <button id="scroll-top-btn" onclick="scrollToTop()">↑</button>
+    <!-- Custom Animated Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top-btn" aria-label="Scroll to top"><i data-lucide="arrow-up"></i></button>
 
     <!-- Navbar -->
-    <header data-aos="fade-down">
-        <nav>
-            <div class="logo">Aamir Imam</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header class="glass-nav">
+        <nav class="container">
+            <a href="#home" class="logo" data-aos="fade-down">aamir<span class="neon-text">.</span></a>
+            <ul class="nav-links">
+                <li data-aos="fade-down" data-aos-delay="100"><a href="#about" class="hover-underline">About</a></li>
+                <li data-aos="fade-down" data-aos-delay="200"><a href="#experience"
+                        class="hover-underline">Experience</a></li>
+                <li data-aos="fade-down" data-aos-delay="300"><a href="#projects" class="hover-underline">Projects</a>
+                </li>
+                <li data-aos="fade-down" data-aos-delay="400"><a href="#skills" class="hover-underline">Skills</a></li>
+                <li data-aos="fade-down" data-aos-delay="500"><a href="#achievements"
+                        class="hover-underline">Achievements</a></li>
+                <li data-aos="fade-down" data-aos-delay="600"><a href="#contact" class="nav-cta glow-btn">Let's Talk</a>
+                </li>
             </ul>
+            <div class="menu-toggle">
+                <i data-lucide="menu"></i>
+            </div>
         </nav>
     </header>
 
-    <!-- Home Section -->
-    <section id="home">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Particles Background -->
+        <div id="particles-js"></div>
+
+        <div class="container hero-content relative-z">
+            <div class="badge floating" data-aos="zoom-in">
+                <span class="pulse"></span> Available for new opportunities
+            </div>
+
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                Hi, I'm <span class="animated-gradient-text">Aamir Imam</span>.<br>
+                I build <span id="typed-text" class="neon-text"></span>
+            </h1>
+
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+                Software Engineer & Data Science Enthusiast passionate about solving complex, real-world problems with
+                elegant code and intelligent models.
+            </p>
+
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="600">
+                <a href="#projects" class="btn btn-primary glow-btn">
+                    Explore My Work <i data-lucide="arrow-right" class="icon-sm"></i>
+                </a>
+                <a href="Aamir_SDE.pdf" target="_blank" class="btn btn-secondary">
+                    View Resume <i data-lucide="file-text" class="icon-sm"></i>
+                </a>
+            </div>
+
+            <div class="hero-socials" data-aos="fade-up" data-aos-delay="800">
+                <a href="https://github.com/aamir-10" target="_blank" aria-label="GitHub" class="social-icon"><i
+                        data-lucide="github"></i></a>
+                <a href="https://www.linkedin.com/in/aamir-imam-7aaa93259/" target="_blank" aria-label="LinkedIn"
+                    class="social-icon"><i data-lucide="linkedin"></i></a>
+                <a href="mailto:aamirimam777@gmail.com" aria-label="Email" class="social-icon"><i
+                        data-lucide="mail"></i></a>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
         <div class="container">
-            <div class="home-content">
-                <h1 data-aos="fade-up">Hi, I'm <span class="gradient-text">Aamir Imam</span></h1>
-                <h2><span id="typing-text"></span></h2>
-
-                <div class="description-box" data-aos="fade-in">
-                    <p data-aos="fade-right">
-                        👋 <strong>Hey there!</strong> I'm a <strong>Software Developer & Data Science Enthusiast</strong>  
-                        passionate about <strong>solving real-world problems</strong> using cutting-edge technologies.
-                    </p>
-                    <p data-aos="fade-left">
-                        🚀 Skilled in <strong>Java, Python, Web Development, Blockchain, and Data Science</strong>,  
-                        I build <strong>scalable, efficient, and innovative</strong> applications.
-                    </p>
-                    <p data-aos="fade-right">
-                        💡 Let's collaborate and create something <strong>impactful</strong> together!
-                    </p>
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="glitch" data-text="About Me">About Me</h2>
+                <div class="line mx-auto"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrapper tilt-card" data-tilt data-tilt-max="10" data-tilt-speed="400"
+                    data-tilt-glare="true" data-tilt-max-glare="0.5" data-aos="zoom-in-right">
+                    <img src="assets/images/profile.jpg" alt="Aamir Imam" class="profile-img">
+                    <div class="img-frame"></div>
                 </div>
-
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn" data-aos="zoom-in">🔍 Explore My Work</a>
-                    <a href="Aamir_SDE.pdf" class="btn secondary" data-aos="zoom-in" target="_blank">📜 View My Resume</a>
+                <div class="about-text" data-aos="fade-left">
+                    <div class="glass-panel">
+                        <p class="lead">
+                            I am a <strong>Computer Science (Data Science)</strong> student at <strong>Bennett
+                                University</strong> with a CGPA of <span class="highlight-badge">9.39/10.0</span>.
+                        </p>
+                        <p>
+                            My expertise spans <strong>Software Engineering, Full-Stack Web Development, and Data
+                                Science</strong>. I thrive on building secure backends, intuitive UIs, and integrating
+                            ML models into production.
+                        </p>
+                        <p>
+                            Beyond academics, I actively contribute to open-source, compete in hackathons, and
+                            continuously explore emerging tech like GenAI to engineer impactful solutions.
+                        </p>
+                    </div>
+                    <div class="stats-container">
+                        <div class="stat-box floating" style="animation-delay: 0s;">
+                            <h3 class="counter" data-target="450">0</h3><span>+</span>
+                            <p>LeetCode</p>
+                        </div>
+                        <div class="stat-box floating" style="animation-delay: 0.2s;">
+                            <h3>9.39</h3>
+                            <p>CGPA</p>
+                        </div>
+                        <div class="stat-box floating" style="animation-delay: 0.4s;">
+                            <h3 class="counter" data-target="10">0</h3><span>+</span>
+                            <p>Projects</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about">
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-gradient-dark">
         <div class="container">
-            <h2 data-aos="fade-right">About Me</h2>
-            <div class="about-content">
-                <div class="image-container" data-aos="zoom-in">
-                    <img src="assets/images/profile.jpg" alt="Aamir Imam">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="glitch" data-text="Experience">Experience</h2>
+                <div class="line mx-auto"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="timeline-dot-animated"></div>
+                    <div class="timeline-content tilt-card glass-panel" data-tilt data-tilt-max="3"
+                        data-tilt-speed="400">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Software Engineer Intern</h3>
+                                <h4 class="company-name">Times Network (Bennett Coleman)</h4>
+                            </div>
+                            <span class="neon-badge">Feb 2026 – Present</span>
+                        </div>
+                        <ul>
+                            <li>Contributed to SocioWatch(CMS), optimizing 20+ features using React.js, GoLang, and REST
+                                APIs, eliminating critical bugs by 35%.</li>
+                            <li>Managed end-to-end dev environment setup of 5+ CMS microservices on Azure VMs, improving
+                                release efficiency by 40%.</li>
+                            <li>Independently developed the WhatsApp Community Console (15+ features) and optimized
+                                system efficiency by 30%.</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">React.js</span><span class="tag">Go</span><span
+                                class="tag">Azure</span><span class="tag">Microservices</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="text" data-aos="fade-left">
-                    <p>
-                        I am a <strong>B.Tech Computer Science and Engineering</strong> student (Data Science specialization) at <strong>Bennett University</strong>, 
-                        currently holding a <strong>CGPA of 9.5</strong>.
-                    </p>
-                    <p>
-                        My expertise lies in <strong>Software Development, Data Science and Web Development.</strong> 
-                        I love solving complex challenges and building <Strong>secure, scalable, and efficient solutions.</Strong>
-                    </p>
-                    <p>
-                        Apart from coding, I actively contribute to <strong>open-source projects</strong> and <strong>participate in hackathons.</strong>  
-                        I'm always eager to learn, explore new technologies and collaborate with techies to develop something great !                     </p>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="timeline-dot-animated"></div>
+                    <div class="timeline-content tilt-card glass-panel" data-tilt data-tilt-max="3"
+                        data-tilt-speed="400">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Data Science Intern</h3>
+                                <h4 class="company-name">Celebal Technologies</h4>
+                            </div>
+                            <span class="neon-badge">May 2025 – Jul 2025</span>
+                        </div>
+                        <ul>
+                            <li>Engineered and deployed ML models using regression and clustering techniques to solve domain-specific problems across healthcare, finance, and retail.</li>
+                            <li>Applied advanced feature engineering and statistical analysis to improve predictive model performance and derive business insights.</li>
+                            <li>Leveraged Generative AI and Retrieval-Augmented Generation (RAG) to build explainable AI features in end-user production applications.</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Python</span><span class="tag">ML</span><span class="tag">GenAI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="timeline-dot-animated"></div>
+                    <div class="timeline-content tilt-card glass-panel" data-tilt data-tilt-max="3"
+                        data-tilt-speed="400">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Finalist – Team Underdogs</h3>
+                                <h4 class="company-name">Epoch Hackathon, IIIT Delhi</h4>
+                            </div>
+                            <span class="neon-badge">Apr 2024</span>
+                        </div>
+                        <p>Competed among 100+ teams; delivered a cost-minimizing gas pipeline algorithm reducing
+                            simulated costs by 30% using K-Means clustering.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span><span class="tag">Clustering</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="glitch" data-text="Featured Projects">Featured Projects</h2>
+                <div class="line mx-auto"></div>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="400"
+                    data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.3" data-aos="zoom-in-up">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/expense-tracker.png" alt="Expense Tracker" loading="lazy">
+                        <div class="project-links">
+                            <a href="https://expensetracker-1wbg.onrender.com" target="_blank" class="cyber-btn"><i
+                                    data-lucide="external-link"></i> Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">Expense Tracker App</h3>
+                        <p>Full-stack personal finance app with JWT-based auth, budget optimization, and interactive
+                            Chart.js dashboards.</p>
+                        <div class="tags">
+                            <span class="tag">React.js</span><span class="tag">Node.js</span><span
+                                class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="400"
+                    data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.3" data-aos="zoom-in-up"
+                    data-aos-delay="150">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/interview-prep-portal.png" alt="Interview Prep Portal" loading="lazy">
+                        <div class="project-links">
+                            <a href="https://interviewprepportal-frontend.onrender.com" target="_blank"
+                                class="cyber-btn"><i data-lucide="external-link"></i> Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">Interview Prep Portal</h3>
+                        <p>AI-powered platform integrating Gemini API to auto-generate 100+ role-specific Q&As with a
+                            responsive Tailwind CSS UI.</p>
+                        <div class="tags">
+                            <span class="tag">React</span><span class="tag">Tailwind</span><span class="tag">Gemini
+                                AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="400"
+                    data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.3" data-aos="zoom-in-up"
+                    data-aos-delay="300">
+                    <div class="project-img-wrapper">
+                        <img src="RAG.png" alt="Loan Assistant" loading="lazy">
+                        <div class="project-links">
+                            <a href="https://loanassistant-07.streamlit.app/" target="_blank" class="cyber-btn"><i
+                                    data-lucide="external-link"></i> Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">Loan Assistant (RAG)</h3>
+                        <p>Interactive loan approval assistant using Streamlit, ML predictions, and a RAG chatbot for
+                            context-aware responses.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span><span class="tag">Streamlit</span><span
+                                class="tag">GenAI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="400"
+                    data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.3" data-aos="zoom-in-up">
+                    <div class="project-img-wrapper">
+                        <img src="CLV.png" alt="CLV Predictor" loading="lazy">
+                        <div class="project-links">
+                            <a href="https://clv-predictor.onrender.com/" target="_blank" class="cyber-btn"><i
+                                    data-lucide="external-link"></i> Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">CLV Predictor</h3>
+                        <p>AI-powered web app estimating customer lifetime value using RFM modeling and XGBoost
+                            predictions.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span><span class="tag">XGBoost</span><span
+                                class="tag">Flask</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="400"
+                    data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.3" data-aos="zoom-in-up"
+                    data-aos-delay="150">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/power-forecasting.png" alt="Power Forecasting" loading="lazy">
+                        <div class="project-links">
+                            <a href="https://power-consumption-forecasting-pipline-etxd2aiumsebnc7wqsnrq8.streamlit.app/"
+                                target="_blank" class="cyber-btn"><i data-lucide="external-link"></i> Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">Power Forecasting</h3>
+                        <p>Time-series pipeline forecasting 7-day energy demand using ARIMA, LSTM, and GARCH on AEP
+                            hourly data.</p>
+                        <div class="tags">
+                            <span class="tag">ARIMA</span><span class="tag">LSTM</span><span class="tag">Prophet</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="400"
+                    data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.3" data-aos="zoom-in-up"
+                    data-aos-delay="300">
+                    <div class="project-img-wrapper">
+                        <img src="Predictor.png" alt="Heal Harbour" loading="lazy">
+                        <div class="project-links">
+                            <a href="https://github.com/aamir-10/HEAL_HARBOUR" target="_blank" class="cyber-btn"><i
+                                    data-lucide="github"></i> Source Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">Heal Harbour</h3>
+                        <p>Machine learning disease prediction system evaluating multiple models, achieving ~98%
+                            accuracy with XGBoost.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">ML</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section (3D Hex/Bento Grid) -->
+    <section id="skills" class="section bg-gradient-dark">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="glitch" data-text="Technical Arsenal">Technical Arsenal</h2>
+                <div class="line mx-auto"></div>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Languages -->
+                <div class="bento-card tilt-card neon-border" data-tilt data-tilt-max="5" data-aos="fade-up">
+                    <div class="bento-icon-wrapper"><i data-lucide="code-2" class="neon-icon"></i></div>
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="tag-glow">Java</span><span class="tag-glow">Python</span><span
+                            class="tag-glow">JavaScript</span><span class="tag-glow">Go</span><span
+                            class="tag-glow">SQL</span><span class="tag-glow">HTML</span><span
+                            class="tag-glow">CSS</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="bento-card tilt-card neon-border" data-tilt data-tilt-max="5" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="bento-icon-wrapper"><i data-lucide="layers" class="neon-icon"></i></div>
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="tag-glow">React.js</span><span class="tag-glow">Node.js</span><span
+                            class="tag-glow">Express.js</span><span class="tag-glow">REST APIs</span><span
+                            class="tag-glow">Tailwind CSS</span><span class="tag-glow">Chart.js</span>
+                    </div>
+                </div>
+
+                <!-- Core Concepts -->
+                <div class="bento-card tilt-card neon-border" data-tilt data-tilt-max="5" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="bento-icon-wrapper"><i data-lucide="lightbulb" class="neon-icon"></i></div>
+                    <h3>Core Concepts</h3>
+                    <div class="skill-tags">
+                        <span class="tag-glow">Data Structures & Algorithms</span><span class="tag-glow">OOP</span><span
+                            class="tag-glow">Microservices</span><span class="tag-glow">SDLC</span><span
+                            class="tag-glow">Agile/Scrum</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="bento-card tilt-card neon-border" data-tilt data-tilt-max="5" data-aos="fade-up">
+                    <div class="bento-icon-wrapper"><i data-lucide="server" class="neon-icon"></i></div>
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="tag-glow">Git/GitHub</span><span class="tag-glow">Docker</span><span
+                            class="tag-glow">Postman</span><span class="tag-glow">Azure</span><span
+                            class="tag-glow">Linux</span><span class="tag-glow">CI/CD</span><span
+                            class="tag-glow">JWT</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="bento-card tilt-card neon-border" data-tilt data-tilt-max="5" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="bento-icon-wrapper"><i data-lucide="database" class="neon-icon"></i></div>
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="tag-glow">MongoDB</span><span class="tag-glow">PostgreSQL</span><span
+                            class="tag-glow">Elasticsearch</span>
+                    </div>
+                </div>
+
+                <!-- Data Science -->
+                <div class="bento-card tilt-card neon-border" data-tilt data-tilt-max="5" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="bento-icon-wrapper"><i data-lucide="brain-circuit" class="neon-icon"></i></div>
+                    <h3>Data Science & ML</h3>
+                    <div class="skill-tags">
+                        <span class="tag-glow">Machine Learning</span><span class="tag-glow">Deep Learning</span><span
+                            class="tag-glow">Pandas</span><span class="tag-glow">TensorFlow</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Skills Section -->
-<section id="skills">
-  <div class="container">
-    <h2 data-aos="fade-up">Skills</h2>
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="glitch" data-text="Achievements">Achievements</h2>
+                <div class="line mx-auto"></div>
+            </div>
 
-    <div class="skills-grid-cards">
-      <!-- Programming -->
-      <div class="skill-card" data-aos="fade-right">
-        <div class="skill-icon programming-icon" data-aos="zoom-in"></div>
-        <h3 data-aos="fade-up">Programming</h3>
-        <ul data-aos="fade-up">
-          <li>Java</li>
-          <li>Python</li>
-          <li>SQL</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
-      </div>
+            <div class="projects-grid" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto;">
 
-      <!-- Web Technologies -->
-      <div class="skill-card" data-aos="fade-up">
-        <div class="skill-icon webtech-icon" data-aos="zoom-in"></div>
-        <h3 data-aos="fade-up">Web Technologies</h3>
-        <ul data-aos="fade-up">
-          <li>React.js</li>
-          <li>Node.js</li>
-          <li>MongoDB</li>
-          <li>Express.js</li>
-        </ul>
-      </div>
-
-      <!-- Data Science / ML -->
-      <div class="skill-card" data-aos="fade-left">
-        <div class="skill-icon ml-icon" data-aos="zoom-in"></div>
-        <h3 data-aos="fade-up">Data Science/ML</h3>
-        <ul data-aos="fade-up">
-          <li>Training & Modeling</li>
-          <li>Data Analysis</li>
-          <li>Machine Learning</li>
-          <li>Deep Learning</li>
-          <li>Big Data</li>
-          <li>Data Visualization</li>
-          <li>Predictive Pipelines</li>
-        </ul>
-      </div>
-
-      <!-- Tools -->
-      <div class="skill-card" data-aos="fade-up">
-        <div class="skill-icon tools-icon" data-aos="zoom-in"></div>
-        <h3 data-aos="fade-up">Tools</h3>
-        <ul data-aos="fade-up">
-          <li>Git/GitHub</li>
-          <li>Pandas</li>
-          <li>NumPy</li>
-          <li>Scikit-learn</li>
-          <li>TensorFlow</li>
-          <li>PowerBI</li>
-          <li>Excel</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-    
-    
-
- 
-   
-
-<!-- Projects Section -->
-<section id="projects">
-  <div class="container">
-    <h2 data-aos="fade-up">Projects</h2>
-    <div class="project-grid">
-
-      <!-- Project: Loan Assistant -->
-      <div class="project-card" data-aos="zoom-in">
-        <img src="RAG.png" alt="Loan Assistant Screenshot" />
-        <h3>Loan Assistant (RAG)</h3>
-        <div class="project-description">
-        <p>Developed an interactive loan approval assistant using Streamlit, integrating machine learning predictions and LIME model explanations.</p>
-        <p>Implemented a Retrieval-Augmented Generation (RAG) chatbot to provide context-aware responses based on user inputs and a document knowledge base.</p>
-        </div><a href="https://loanassistant-07.streamlit.app/" class="btn">View Project</a>
-        <div class="project-tags">
-           <span>Python</span>
-           <span>Random Forest</span>
-           <span>Hugging Face</span>
-           <span>GenAI</span>
-        </div>
-      </div>
-        <!-- Project: CLV Predictor -->
-      <div class="project-card" data-aos="zoom-in">
-        <img src="CLV.png" alt="CLV Predictor Screenshot" />
-        <h3>CLV Predictor</h3>
-        <div class="project-description">
-        <p>An AI-powered web application that helps businesses estimate the potential lifetime value of a customer based on purchase history, frequency, and behavioral patterns.</p>
-        <p>Engineered key features like recency, frequency, and monetary value to drive accurate predictions. Responsive and modern UI built with HTML, CSS, and JavaScript.</p>
-        </div><a href="https://clv-predictor.onrender.com/" class="btn">View Project</a>
-        <div class="project-tags">
-           <span>Python</span>
-           <span>XG Boost</span>
-           <span>Flask</span>
-        </div>
-      </div>
-     <!-- Project: Expense Tracker -->
-      <div class="project-card" data-aos="zoom-in">
-        <img src="assets/images/expense-tracker.png" alt="Expense Tracker Screenshot" />
-        <h3>Expense Tracker</h3>
-        <div class="project-description">
-        <p>Built a full-stack Expense Tracker using the MERN stack, featuring JWT authentication, monthly income/expense tracking, budget limit setting, and interactive data visualizations through dynamic charts.</p>
-        <p>Implemented a smart budget optimization system that analyzes user spending patterns and provides real-time alerts and suggestions to help users manage finances more efficiently.</p>
-        </div><a href="https://expensetracker-1wbg.onrender.com" class="btn">View Project</a>
-        <div class="project-tags">
-           <span>React.js</span>
-           <span>Node.js</span>
-           <span>Express.js</span>
-           <span>MongoDB</span>
-        </div>
-      </div>
-
-      <!-- Project: Interview Prep Portal with tagline overlay -->
-      <div class="project-card project-with-overlay" data-aos="zoom-in">
-        <div class="project-image-wrapper">
-          <img src="assets/images/interview-prep-portal.png" alt="Interview Prep Portal Screenshot" />
-        </div>
-        <h3>Interview Prep Portal</h3>
-         <div class="project-description">
-        <p>Built a web app powered by Gemini API for personalized technical questions and answers to deliver tailored practice material, enhancing user engagement and preparation effectiveness.</p>
-        <p>Designed a dynamic and responsive UI supporting features like question pinning, expandable explanations and accordion-style QA display, to create an intuitive preparation environment.</p>
-        </div>
-        <a href="https://interviewprepportal-frontend.onrender.com" class="btn">View Project</a> <!-- Replace # with actual deployed URL -->
-        <div class="project-tags">
-           <span>React.js</span>
-           <span>Node.js</span>
-           <span>Express.js</span>
-           <span>MongoDB</span>
-           <span>TailwindCSS</span>
-           <span>Gemini</span>
-        </div>
-      </div>
-        <!-- Project: Power Forecasting -->
-      <div class="project-card" data-aos="zoom-in">
-        <img src="assets/images/power-forecasting.png" alt="Power Forecasting Screenshot" />
-        <h3>Power Forecasting and Pipelining</h3>
-        <div class="project-description">
-        <p>Built a robust time-series pipeline to forecast 7-day energy demand using ARIMA, SARIMA, Exponential Smoothing, and GARCH models on AEP hourly data for accurate energy consumption forecasting, enhancing decision-making with predictive analytics.</p>
-        <p>Designed an interactive Streamlit dashboard to visualize load and volatility forecasts, enhancing short-term planning with real-time insights. Also trained the dataset upon various time-series models.</p>
-        </div>
-        <a href="https://power-consumption-forecasting-pipline-etxd2aiumsebnc7wqsnrq8.streamlit.app/" class="btn">View Project</a>
-        <div class="project-tags">
-           <span>Python</span>
-           <span>Streamlit</span>
-           <span>ARIMA</span>
-           <span>SARIMA</span>
-           <span>Prophet</span>
-           <span>LSTM</span>
-           <span>GARCH</span>
-           <span>Exponential Smoothing</span>
-           
-        </div>
-      </div>
-
-      <!-- Project: Heal Harbour -->
-      <div class="project-card" data-aos="zoom-in">
-        <img src="Predictor.png" alt="Heal Harbour Screenshot" />
-        <h3>Heal Harbour</h3>
-        <div class="project-description">
-        <p>Developed a machine learning-based disease prediction system using blood sample data, evaluating models such as Logistic Regression, Decision Tree, Gradient Boosting, and XGBoost. Comprehensive performance analysis revealed XGBoost as the most accurate, achieving ~98% accuracy.</p>
-        <p>Implemented the XGBoost prediction model, serving as the core component for the disease prediction system with plans for further integration and deployment.</p>
-        </div>
-        <a href="https://github.com/aamir-10/HEAL_HARBOUR" class="btn">View Project</a>
-        <div class="project-tags">
-           <span>Python</span>
-           <span>Logistic Regression</span>
-           <span>XGBoost</span>
-           <span>Decision Tree</span>
-           <span>Gradient Boosting Classifier</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Experience Section -->
-<section id="experience">
-  <div class="experience-container">
-    <h2 data-aos="fade-up">Experience</h2>
-
-    <div class="timeline">
-        <!-- Timeline Item 1 -->
-<div class="timeline-item" data-aos="fade-up">
-  <div class="timeline-dot"></div>
-  <div class="experience-card">
-    <span class="experience-date">May 2025 – Present</span>
-    <h3 class="experience-role">Data Science Intern</h3>
-    <p class="experience-company">Celebal Technologies</p>
-    <p class="experience-description">
-      Currently working on real-world data science projects involving preprocessing, feature engineering, and model optimization🧠. Collaborating in a fast-paced team to deliver scalable data solutions for enterprise use.
-    </p>
-    <div class="experience-tags">
-      <span>Python</span>
-      <span>Machine Learning</span>
-      <span>Data Preprocessing</span>
-      <span>Model Tuning</span>
-      <span>SQL</span>
-      <span>GenAI</span>
-    </div>
-  </div>
-</div>
-
-
-      
-
-      <!-- Timeline Item 2 -->
-      <div class="timeline-item" data-aos="fade-up">
-        <div class="timeline-dot"></div>
-        <div class="experience-card">
-          <span class="experience-date">Apr 2024</span>
-          <h3 class="experience-role">Finalist – Team Underdogs</h3>
-          <p class="experience-company">National Hackathon</p>
-          <p class="experience-description">
-            Built smart gas pipeline routes using K-Means clustering, visualizations & ML📈. Predicted house values, optimized costs, and had a blast doing it!
-          </p>
-          <div class="experience-tags">
-            <span>Python</span>
-            <span>Clustering</span>
-            <span>Regression</span>
-            <span>Data Science</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Timeline Item 3-->
-      <div class="timeline-item" data-aos="fade-up">
-        <div class="timeline-dot"></div>
-        <div class="experience-card">
-          <span class="experience-date">Jan – Mar 2023</span>
-          <h3 class="experience-role">Data Science Intern</h3>
-          <p class="experience-company">Aican Automate</p>
-          <p class="experience-description">
-            Automated messy data pipelines, built real-time dashboards📊, and improved model accuracy with smarter ML models.
-          </p>
-          <div class="experience-tags">
-            <span>Python</span>
-            <span>NumPy</span>
-            <span>Pandas</span>
-            <span>Matplotlib</span>
-            <span>Machine Learning</span>
-            <span>Data Visualization</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- Achievements Section -->
-<section id="achievements">
-    <div class="achievements-container">
-        <h2 data-aos="fade-up">Achievements</h2>
-
-        <div class="achievement-grid">
-
-            <!-- First Achievement -->
-            <div class="achievement-item" data-aos="fade-right">
-                <div class="achievement-image">
-                    <img src="assets/images/Research.jpg" alt="IET Conference Presentation">
+                <!-- Achievement 1 -->
+                <div class="project-card tilt-card horizontal-card" data-tilt data-tilt-max="3" data-tilt-speed="400"
+                    data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/Research.jpg" alt="Published Research" loading="lazy"
+                            style="object-fit: contain; width: 100%; height: 100%; padding: 15px;">
+                        <div class="project-links">
+                            <a href="https://ieeexplore.ieee.org/document/10235793" target="_blank" class="cyber-btn"><i
+                                    data-lucide="external-link"></i> View Paper</a>
+                        </div>
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">Presented at the IET Research Conference, NIT Patna</h3>
+                        <p style="color: var(--accent); font-size: 0.9rem; margin-bottom: 12px; font-weight: 600;">July
+                            2023</p>
+                        <p style="margin-bottom: 8px;">Analyzed the role of ChatGPT in software engineering education,
+                            evaluating its effectiveness in coding, bug fixing, and logical problem-solving.</p>
+                        <p>Provided insights on how software students can leverage ChatGPT to advance their careers.</p>
+                    </div>
                 </div>
-                <div class="achievement-text">
-                    <h3 class="achievement-title">Presented at the IET Research Conference, NIT Patna</h3>
-                    <p class="achievement-date">July 2023</p>
-                    <ul class="achievement-details">
-                        <li>Analyzed the role of ChatGPT in software engineering education, evaluating its effectiveness in coding, bug fixing, and logical problem-solving.</li>
-                        <li>Provided insights on how software students can leverage ChatGPT to advance their careers.</li>
-                        <li><a href="https://ieeexplore.ieee.org/document/10235793" target="_blank">Click here!</a></li>
-                    </ul>
+
+                <!-- Achievement 2 -->
+                <div class="project-card tilt-card horizontal-card reverse" data-tilt data-tilt-max="3" data-tilt-speed="400"
+                    data-tilt-perspective="1000" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="zoom-in-up"
+                    data-aos-delay="150">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/Deans.jpg" alt="Dean's List" loading="lazy"
+                            style="object-fit: contain; width: 100%; height: 100%; padding: 15px;">
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">Dean’s List Award</h3>
+                        <p style="color: var(--accent); font-size: 0.9rem; margin-bottom: 12px; font-weight: 600;">
+                            October 2024</p>
+                        <p style="margin-bottom: 8px;">Recognized for outstanding academic achievement.</p>
+                        <p>Secured a position in the top percentile of students.</p>
+                    </div>
                 </div>
+
             </div>
-
-            <!-- Second Achievement -->
-            <div class="achievement-item" data-aos="fade-left">
-                <div class="achievement-image">
-                    <img src="assets/images/Deans.jpg" alt="Dean’s List Award">
-                </div>
-                <div class="achievement-text">
-                    <h3 class="achievement-title">Dean’s List Award</h3>
-                    <p class="achievement-date">October 2024</p>
-                    <ul class="achievement-details">
-                        <li>Recognized for outstanding academic achievement.</li>
-                        <li>Secured a position in the top percentile of students.</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- Certifications Section -->
-
-<section id="certifications">
-    <h2 data-aos="fade-up">Certifications</h2>
-
-    <div class="certifications-grid">
-        <div class="cert-item-container">
-            <div class="cert-item" data-aos="fade-up">
-                <img src="assets/images/Data_Structures.png" alt="UC San Diego Data Structures">
-            </div>
-            <p class="cert-title">UC San Diego - Data Structures</p>
-            <p class="cert-description">
-                Mastered key data structures like arrays, linked lists, trees, and graphs, focusing on efficient implementation and optimization.
-            </p>
-        </div>
-
-        <div class="cert-item-container">
-            <div class="cert-item" data-aos="fade-up">
-                <img src="assets/images/Google.png" alt="Google Data Analytics">
-            </div>
-            <p class="cert-title">Google Data Analytics</p>
-            <p class="cert-description">
-                Gained expertise in data analysis, SQL, R, and Tableau, preparing for data-driven decision-making roles.
-            </p>
-        </div>
-
-        <div class="cert-item-container">
-            <div class="cert-item" data-aos="fade-up">
-                <img src="assets/images/Algorithmic_Toolbox.png" alt="UC San Diego Algorithmic Toolbox">
-            </div>
-            <p class="cert-title">UC San Diego - Algorithmic Toolbox</p>
-            <p class="cert-description">
-                Learned essential algorithmic techniques like recursion, greedy algorithms, divide & conquer, and dynamic programming.
-            </p>
-        </div>
-
-        <div class="cert-item-container">
-            <div class="cert-item" data-aos="fade-up">
-                <img src="assets/images/Eppoch_Hackathon.png" alt="Epoch Hackathon IIIT Delhi">
-            </div>
-            <p class="cert-title">Epoch Hackathon - IIIT Delhi</p>
-            <p class="cert-description">
-                Competed in a high-intensity coding hackathon, developing innovative solutions in software development and AI/ML.
-            </p>
-        </div>
-
-        <div class="cert-item-container">
-            <div class="cert-item" data-aos="fade-up">
-                <img src="assets/images/apna_college.png" alt="Apna College DSA in Java">
-            </div>
-            <p class="cert-title">Apna College - DSA in Java</p>
-            <p class="cert-description">
-                Strengthened problem-solving skills through in-depth learning of Data Structures and Algorithms using Java.
-            </p>
-        </div>
-
-        <div class="cert-item-container">
-            <div class="cert-item" data-aos="fade-up">
-                <img src="assets/images/IBM.png" alt="IBM Professional Machine Learning">
-            </div>
-            <p class="cert-title">IBM Professional Machine Learning Certificate</p>
-            <p class="cert-description">
-                Specialized in machine learning, deep learning, and model deployment using Python and IBM Watson tools.
-            </p>
-        </div>
-    </div>
-</section>
-
-    
-<!-- Contact Section -->
-    <section id="contact">
-        <h2 data-aos="fade-up">Contact Me</h2>
-        <p>Have a project in mind? Let's connect!</p>
-        
-        <form id="contact-form" action="https://formspree.io/f/myzeweed" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/aamir-imam-7aaa93259/"><img src="assets/images/linkedin.jpeg" alt="LinkedIn"></a>
-            <a href="https://github.com/aamir-10"><img src="assets/images/Github.jpeg" alt="GitHub"></a>
-            <a href="mailto:aamirimam777@gmail.com"><img src="assets/images/gmail.jpg" alt="Email"></a>
         </div>
     </section>
 
+    <!-- Certifications Section -->
+    <section id="certifications" class="section bg-gradient-dark">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="glitch" data-text="Certifications">Certifications</h2>
+                <div class="line mx-auto"></div>
+            </div>
+
+            <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+
+                <div class="project-card tilt-card" data-tilt data-tilt-max="15" data-aos="zoom-in-up">
+                    <div class="project-img-wrapper" style="height: 200px; background: rgba(0,0,0,0.5);">
+                        <img src="assets/images/Google.png" alt="Google Data Analytics" loading="lazy"
+                            style="object-fit: contain; padding: 15px;">
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">Google Data Analytics</h3>
+                        <p>Gained expertise in data analysis, SQL, R, and Tableau, preparing for data-driven
+                            decision-making roles.</p>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-card" data-tilt data-tilt-max="15" data-aos="zoom-in-up"
+                    data-aos-delay="100">
+                    <div class="project-img-wrapper" style="height: 200px; background: rgba(0,0,0,0.5);">
+                        <img src="assets/images/IBM.png" alt="IBM ML Professional" loading="lazy"
+                            style="object-fit: contain; padding: 15px;">
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">IBM Professional Machine Learning Certificate</h3>
+                        <p>Specialized in machine learning, deep learning, and model deployment using Python and IBM
+                            Watson tools.</p>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-card" data-tilt data-tilt-max="15" data-aos="zoom-in-up"
+                    data-aos-delay="200">
+                    <div class="project-img-wrapper" style="height: 200px; background: rgba(0,0,0,0.5);">
+                        <img src="assets/images/Data_Structures.png" alt="Data Structures" loading="lazy"
+                            style="object-fit: contain; padding: 15px;">
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">UC San Diego - Data Structures</h3>
+                        <p>Mastered key data structures like arrays, linked lists, trees, and graphs, focusing on
+                            efficient implementation and optimization.</p>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-card" data-tilt data-tilt-max="15" data-aos="zoom-in-up">
+                    <div class="project-img-wrapper" style="height: 200px; background: rgba(0,0,0,0.5);">
+                        <img src="assets/images/Algorithmic_Toolbox.png" alt="Algorithmic Toolbox" loading="lazy"
+                            style="object-fit: contain; padding: 15px;">
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">UC San Diego - Algorithmic Toolbox</h3>
+                        <p>Learned essential algorithmic techniques like recursion, greedy algorithms, divide & conquer,
+                            and dynamic programming.</p>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-card" data-tilt data-tilt-max="15" data-aos="zoom-in-up"
+                    data-aos-delay="100">
+                    <div class="project-img-wrapper" style="height: 200px; background: rgba(0,0,0,0.5);">
+                        <img src="assets/images/apna_college.png" alt="Apna College" loading="lazy"
+                            style="object-fit: contain; padding: 15px;">
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">Apna College - DSA in Java</h3>
+                        <p>Strengthened problem-solving skills through in-depth learning of Data Structures and
+                            Algorithms using Java.</p>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-card" data-tilt data-tilt-max="15" data-aos="zoom-in-up"
+                    data-aos-delay="200">
+                    <div class="project-img-wrapper" style="height: 200px; background: rgba(0,0,0,0.5);">
+                        <img src="assets/images/Eppoch_Hackathon.png" alt="Epoch Hackathon" loading="lazy"
+                            style="object-fit: contain; padding: 15px;">
+                    </div>
+                    <div class="project-info glass-panel">
+                        <h3 class="neon-text-subtle">Epoch Hackathon - IIIT Delhi</h3>
+                        <p>Competed in a high-intensity coding hackathon, developing innovative solutions in software
+                            development and AI/ML.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section relative-z">
+        <div class="container">
+            <div class="contact-wrapper glass-panel tilt-card neon-border" data-aos="flip-up" data-aos-duration="1200">
+                <div class="contact-info">
+                    <h2 class="animated-gradient-text">Let's Create Something Amazing</h2>
+                    <p>I'm open to new opportunities and exciting projects. Let's connect and build the future together.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:aamirimam777@gmail.com" class="social-btn"><img src="assets/images/gmail.jpg" alt="Email" style="width: 24px; height: 24px; border-radius: 4px; object-fit: cover;"> Email
+                            Me</a>
+                        <a href="https://www.linkedin.com/in/aamir-imam-7aaa93259/" target="_blank"
+                            class="social-btn"><img src="assets/images/linkedin.jpeg" alt="LinkedIn" style="width: 24px; height: 24px; border-radius: 4px; object-fit: cover;"> Connect</a>
+                        <a href="https://github.com/aamir-10" target="_blank" class="social-btn"><img src="assets/images/Github.jpeg" alt="GitHub" style="width: 24px; height: 24px; border-radius: 4px; object-fit: cover;"> GitHub</a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form id="contact-form" action="https://formspree.io/f/myzeweed" method="POST" class="cyber-form">
+                        <div class="input-container">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="input-container">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="input-container">
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <button type="submit" class="glow-btn-submit">
+                            <span>Send Transmission</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content text-center">
+            <div class="footer-logo glitch-logo" data-text="aamir.">aamir<span class="neon-text">.</span></div>
+            <p>&copy; 2026 Engineered by Aamir Imam.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
